@@ -9,7 +9,10 @@ export const siteConfig: SiteConfig = {
   footerText:
     process.env.BLOG_FOOTER_TEXT ??
     "Feito com Next.js e publicado na Netlify.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    process.env.URL ??
+    "http://localhost:3000",
   author: {
     name: "Lucas Batista",
     role: "Frontend Developer em formação contínua",
