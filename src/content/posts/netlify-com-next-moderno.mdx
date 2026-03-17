@@ -1,0 +1,26 @@
+---
+title: "Netlify com Next.js moderno: o que realmente precisa configurar"
+excerpt: "A integração atual da Netlify com Next.js já cobre App Router, SSR e ISR sem repetir a configuração legada do template antigo."
+publishedAt: "2026-03-10"
+tags:
+  - Netlify
+  - Deploy
+  - Next.js
+featured: false
+---
+
+O template do desafio aponta para Netlify, mas a integração evoluiu bastante. Hoje, a plataforma já suporta recursos modernos do Next.js usando o adapter baseado em OpenNext.
+
+## O que eu não quis repetir
+
+Não faz sentido fixar plugin antigo só porque ele existia no template original. Isso aumentaria o risco de desatualização sem trazer benefício real para a solução.
+
+## O que vale configurar
+
+- comando de build;
+- variáveis de ambiente do blog;
+- `NETLIFY_NEXT_SKEW_PROTECTION=true` para sessões mais seguras entre deploys.
+
+## Resultado
+
+Menos configuração manual, menos dívida técnica e um deploy alinhado com o estado atual do ecossistema.

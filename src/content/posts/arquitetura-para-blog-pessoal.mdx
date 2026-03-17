@@ -1,0 +1,44 @@
+---
+title: "Arquitetura para um blog pessoal que não trava sua evolução"
+excerpt: "Como organizar um blog em Next.js pensando em manutenção, clareza de domínio e deploy simples."
+publishedAt: "2026-03-15"
+tags:
+  - Next.js
+  - Arquitetura
+  - Portfólio
+featured: true
+---
+
+Criar um blog pessoal para portfólio parece simples, mas quase sempre o problema aparece depois do primeiro deploy. O código funciona, porém a estrutura não ajuda quando chega a hora de adicionar novos posts, melhorar SEO ou trocar a identidade visual.
+
+## O que eu preservei do desafio
+
+Do desafio original, a essência continua a mesma:
+
+- conteúdo em arquivos locais;
+- páginas dinâmicas para posts;
+- personalização do blog;
+- estrutura componentizada.
+
+## O que eu mudei na implementação
+
+Em vez de reproduzir o template antigo literalmente, optei por uma base mais atual:
+
+- `App Router`;
+- `TypeScript`;
+- funções de leitura centralizadas em `src/lib`;
+- conteúdo em `src/content/posts`.
+
+> A principal diferença é de sustentabilidade técnica. A solução fica mais preparada para crescer sem virar um conjunto de exceções.
+
+## Critério de organização
+
+Quando um projeto de conteúdo nasce bem organizado, novos posts deixam de ser uma tarefa de manutenção e viram apenas mais uma entrega editorial.
+
+```tsx
+export async function getAllPosts() {
+  // lê os arquivos .mdx, extrai frontmatter e ordena por data
+}
+```
+
+Esse tipo de separação simples já resolve boa parte do problema.
